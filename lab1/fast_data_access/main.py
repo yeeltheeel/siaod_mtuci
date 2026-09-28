@@ -5,10 +5,10 @@ import heapq as hp
 from hash_table import HashTable
 from binary_heap import MinHeap
 
-big_num = int(1e5) # >=1e5
-a = int(1e2)
+BIG_NUM = int(1e5) # >=1e5
+A = int(1e2)
 
-def get_time(func, n=big_num):
+def get_time(func, n=BIG_NUM):
 	timer = tmt.Timer()
 	total = tmt.timer.timeit(number=n)
 	return total
@@ -21,7 +21,7 @@ def task2():
 				return i
 		return -1
 
-	array_int = [randint(-a, a) for i in range(big_num)]
+	array_int = [randint(-A, A) for i in range(BIG_NUM)]
 
 # 3
 def task3():
@@ -31,10 +31,10 @@ def task3():
 				return target
 		return -1
 
-	array_dict = [(i, randint(-a, a)) for i in range(big_num)]
+	array_dict = [(i, randint(-A, A)) for i in range(BIG_NUM)]
 	st = 0
-	md = big_num // 2
-	fn = big_num - 1
+	md = BIG_NUM // 2
+	fn = BIG_NUM - 1
 	id_search(array_dict, st)
 	id_search(array_dict, md)
 	id_search(array_dict, fn)
@@ -82,7 +82,7 @@ def task10():
 
 # 11
 def task11():
-	array_int = [randint(-a, a) for i in range(big_num)]
+	array_int = [randint(-A, A) for i in range(BIG_NUM)]
 	for K in [10, 100, 1000]:
 		pass
 
