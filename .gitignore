@@ -1,1 +1,6 @@
-*.aux *.synctex.gz *.toc *.log *.out *.pyc
+*.aux 
+*.synctex.gz 
+*.toc 
+*.log 
+*.out 
+*.pyc
