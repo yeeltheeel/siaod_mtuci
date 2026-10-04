@@ -24,7 +24,7 @@ class MinHeap():
 		print(self.data) 
 
 	def push(self, value):
-		pass
+		self.data.append(value)
 
 	def _sift_down(self, index):
 		size = len(self.data)

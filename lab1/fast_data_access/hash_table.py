@@ -1,7 +1,10 @@
 class HashTable():
-	def __init__(self):
-		self.bucket_num = 0
-		self.empty_array_list = []
+	def __init__(self, bn=0):
+		self.bucket_num = bn
+		if bn > 0:
+			self.empty_array_list = [[] for i in range(bn)]
+		else:
+			self.empty_array_list = []
 		self.elem_counter = 0
 
 	def set(self, key, value):

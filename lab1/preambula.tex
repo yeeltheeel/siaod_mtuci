@@ -42,19 +42,31 @@
 
 %
 
-\geometry{left=25mm}
-\geometry{right=10mm}
+\geometry{left=30mm}
+\geometry{right=15mm}
 \geometry{top=20mm}
-\geometry{bottom=25mm}
+\geometry{bottom=20mm}
 
-\newcommand{\ssr}[1]{\begin{center}
-		\LARGE\bfseries{#1}
-	\end{center} \addcontentsline{toc}{chapter}{#1}  }
+%
+
+\setlength{\cftbeforetoctitleskip}{0pt}
+\setlength{\cftaftertoctitleskip}{1em}
+\renewcommand{\cfttoctitlefont}{\hfill\LARGE\bfseries} 
+\renewcommand{\cftaftertoctitle}{\hfill\hspace*{0.5em}}
+
+%
+
+\graphicspath{{assets/}}
+\lstset{inputpath=fast_data_access/} 
+
+%
 
 \makeatletter
 \renewcommand\LARGE{\@setfontsize\LARGE{20pt}{20}}
 \renewcommand\Large{\@setfontsize\Large{18pt}{20}}
 \renewcommand\large{\@setfontsize\large{16pt}{20}}
+\newcommand{\tab}{\hspace{2em}}
+
 \makeatother
 \RequirePackage{titlesec}
 \titleformat{\chapter}[block]{\hspace{\parindent}\large\bfseries}{\thechapter}{0.5em}{\Large\bfseries\raggedright}
@@ -67,8 +79,9 @@
 \titlespacing{\subsection}{12.5mm}{10pt}{10pt}
 \titlespacing{\subsubsection}{12.5mm}{10pt}{10pt}
 
-\graphicspath{{assets/}}
-\lstset{inputpath=fast_data_access/} 
+\def\labelitemi{---}
+%\setlist[itemize]{leftmargin=1.25cm, itemindent=0.65cm}
+%\setlist[enumerate]{leftmargin=1.25cm, itemindent=0.55cm}
 
 \renewcommand{\theenumi}{\arabic{enumi}}
 \renewcommand{\labelenumi}{\arabic{enumi}\text{)}}
@@ -100,10 +113,6 @@
 
 \linespread{1}
 \parindent=1cm
-
-\def\labelitemi{---}
-%\setlist[itemize]{leftmargin=1.25cm, itemindent=0.65cm}
-%\setlist[enumerate]{leftmargin=1.25cm, itemindent=0.55cm}
 
 \newcommand{\specialcell}[2][c]{
 	\begin{tabular}[#1]{@{}c@{}}#2\end{tabular}
