@@ -1,0 +1,48 @@
+root=8, right_child=12, leaf=14
+
+root=8, right_child=4, leaf=6
+
+near root: (8, 1)
+outer level: (14, 3)
+not existing: (None, 3)
+
+preorder: [8, 4, 2, 6, 12, 10, 14]
+inorder: [2, 4, 6, 8, 10, 12, 14]
+postorder: [2, 6, 4, 10, 14, 12, 8]
+
+removed leaf: [2, 4, 6, 8, 10, 12]
+removed element with single child: [8, 4, 2, 6, 10]
+removed element with two children: [8, 6, 2, 10]
+
+height of [8, 4, 2, 6, 12, 10, 14] is 2
+height of [2, 4, 6, 8, 10, 12, 14] is 6
+
+balanced [30, 20, 10] is [20, 10, 30]
+balanced [10, 20, 30] is [20, 10, 30]
+
+double rotation of [30, 10, 20] is [20, 10, 30]
+double rotation of [10, 30, 20] is [20, 10, 30]
+
+range_sum_naive elapsed=0.7601s
+
+build_prefix elapsed=0.0068s
+range_sum_prefix elapsed=0.0003s
+
+elapsed fenwick range_sum=1208820s, sum=1208820s for range[66998, 91007]
+elapsed fenwick range_sum=929396s, sum=929396s for range[9642, 27989]
+elapsed fenwick range_sum=14142s, sum=14142s for range[98345, 98603]
+elapsed fenwick range_sum=113434s, sum=113434s for range[68688, 70956]
+elapsed fenwick range_sum=1018573s, sum=1018573s for range[49169, 69335]
+
+seg_tree=1208820 for range[66998, 91007]
+seg_tree=929396 for range[9642, 27989]
+seg_tree=14142 for range[98345, 98603]
+seg_tree=113434 for range[68688, 70956]
+seg_tree=1018573 for range[49169, 69335]
+
+seg_tree_mms=(1208820, 1, 100) for range[66998, 91007]
+seg_tree_mms=(929396, 1, 100) for range[9642, 27989]
+seg_tree_mms=(14142, 2, 100) for range[98345, 98603]
+seg_tree_mms=(113434, 1, 100) for range[68688, 70956]
+seg_tree_mms=(1018573, 1, 100) for range[49169, 69335]
+
