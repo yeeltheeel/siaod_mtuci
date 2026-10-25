@@ -171,17 +171,17 @@ def balance(node, key):
 		return node
 
 	bf = balance_factor(node)
-	# LL
+	# ll
 	if bf > 1 and key < node.left.key:
 		return rotate_right(node) 
-	# RR                    
+	# rr                    
 	if bf < -1 and key > node.right.key:
 		return rotate_left(node)          
-	# LR
+	# lr
 	if bf > 1 and key > node.left.key:                
 		node.left = rotate_left(node.left)
 		return rotate_right(node)
-	# RL
+	# rl
 	if bf < -1 and key < node.right.key:              
 		node.right = rotate_right(node.right)
 		return rotate_left(node)
