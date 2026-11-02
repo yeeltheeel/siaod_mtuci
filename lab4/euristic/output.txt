@@ -1,0 +1,57 @@
+A - B : 4
+A - C : 3
+B - D : 2
+C - D : 4
+E - G : 6
+F - G : 1
+total_weight=21
+steps=21, processed=83
+S..#........
+*#.#.######.
+*#...#......
+*###.#.####.
+*....#....#.
+*#####.##.#.
+*******##...
+.#####****#.
+.#...####*#.
+.#.#.....*#.
+...#.####*..
+####.....*G.
+p=(0, 0): manhattan=21 euclidean=14.866
+p=(6, 0): manhattan=15 euclidean=11.18
+p=(6, 6): manhattan=9 euclidean=6.403
+p=(7, 9): manhattan=5 euclidean=4.123
+p=(11, 9): manhattan=1 euclidean=1.0
+steps=25 processed=26
+S..#........
+*#.#.######.
+*#...#......
+*###.#.####.
+*....#....#.
+*#####.##.#.
+*......##...
+*#####....#.
+*#***####.#.
+*#*#*.....#.
+***#*####...
+####******G.
+manhatten: cost=21 processed=40
+S..#........
+*#.#.######.
+*#...#......
+*###.#.####.
+*....#....#.
+*#####.##.#.
+*******##...
+.#####****#.
+.#...####*#.
+.#.#.....*#.
+...#.####*..
+####.....*G.
+euclidean: cost=21 processed=43
+bfs: cost=41 for len=21, processed=83 
+dijkstra: cost=25 for len=25, processed=78 
+greedy: cost=25 for len=25, processed=26 
+a*_m: cost=25 for len=25, processed=54 
+a*_e: cost=25 for len=25, processed=51 
